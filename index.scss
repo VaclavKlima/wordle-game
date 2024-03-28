@@ -1,0 +1,68 @@
+body {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1b242f;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  table {
+
+    border-collapse: collapse;
+    margin: 0 auto;
+
+
+    th, td {
+      border: 1px solid #fff;
+      padding: 10px;
+      text-align: center;
+      width: 50px;
+      height: 70px;
+      font-weight: bold;
+      font-size: 2rem;
+
+      &.correct {
+        --color: rgba(40, 167, 69, 0.65);
+        background-color: var(--color);
+        animation: flip 0.5s;
+      }
+
+      &.incorrect {
+        --color: rgba(220, 53, 69, 0.68);
+        animation: flip 0.5s;
+        background-color: var(--color);
+
+      }
+
+      &.unanswered {
+        --color: rgba(255, 193, 7, 0.62);
+        animation: flip 0.5s;
+        background-color: var(--color);
+      }
+    }
+  }
+}
+
+// animation for the reveal of the cell -> flip the cell and show the content
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+    background-color: transparent;
+  }
+  50% {
+    transform: rotateY(90deg);
+    background-color: rgba(var(--color), 0.2);
+  }
+  100% {
+    transform: rotateY(0deg);
+    background-color: var(--color);
+  }
+}
