@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   display: block;
   justify-content: center;
@@ -5,18 +6,23 @@ body {
   height: 100vh;
   background-color: #1b242f;
   color: #fff;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-body h1 {
+
+h1 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
 }
-body table {
+
+table {
   border-collapse: collapse;
   margin: 0 auto;
 }
-body table th, body table td {
+table th, table td {
   border: 1px solid #fff;
   padding: 10px;
   text-align: center;
@@ -25,17 +31,17 @@ body table th, body table td {
   font-weight: bold;
   font-size: 2rem;
 }
-body table th.correct, body table td.correct {
+table th.correct, table td.correct {
   --color: rgba(40, 167, 69, 0.65);
   background-color: var(--color);
   animation: flip 0.5s;
 }
-body table th.incorrect, body table td.incorrect {
-  --color: rgba(220, 53, 69, 0.68);
+table th.incorrect, table td.incorrect {
+  --color: rgba(220, 53, 69, 0.56);
   animation: flip 0.5s;
   background-color: var(--color);
 }
-body table th.unanswered, body table td.unanswered {
+table th.unanswered, table td.unanswered {
   --color: rgba(255, 193, 7, 0.62);
   animation: flip 0.5s;
   background-color: var(--color);
@@ -48,12 +54,35 @@ body table th.unanswered, body table td.unanswered {
   }
   50% {
     transform: rotateY(90deg);
-    background-color: rgba(var(--color), 0.2);
+    background-color: rgba(var(--color), 0.1);
   }
   100% {
     transform: rotateY(0deg);
     background-color: var(--color);
   }
+}
+.win-dialog {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #fd9102;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-none {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

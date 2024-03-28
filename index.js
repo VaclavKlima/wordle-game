@@ -113,8 +113,8 @@ class WordleCzechVersion {
             await this.animateRow()
 
             setTimeout(() => {
-                alert('You won!')
-                location.reload()
+               let win = document.getElementById('win-condition')
+                win.classList.remove('d-none')
             }, 500 + this.selected_word.length * 150)
 
 
